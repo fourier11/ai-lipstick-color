@@ -1,0 +1,139 @@
+/**
+ * Copyright 2020 fourier11
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* pages/lipstick/lipstick.wxss */
+.container-lip{
+  height: 100vh;
+}
+
+.popular-view{
+  background: white; 
+  height: 120px;
+}
+
+.brands-view{
+  background: white; 
+  height: 500px
+}
+
+.popular-scroll-view{
+  height: 100%;
+  white-space: nowrap; 
+  display: flex;
+}
+
+.lipstick-brand-scroll{
+  height: 100%
+}
+
+.scroll-view_H{
+  background: white; 
+  width: 80px; 
+  height: 80px; 
+  display: inline-block;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.scroll-view-item{
+  width: 100%; 
+  height: 100%; 
+  display:flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.item-view{
+  width: 80%; 
+  height: 80%; 
+  display:flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+  border-color: white;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 4rpx 4rpx 4rpx 4rpx;
+}
+
+.item-text{
+  width:100%;
+  height:100%;
+  font-size: 25rpx;
+  color: white;
+  display: flex;
+  align-items: center; /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.brand-dividing-line{
+  height:1rpx;
+  background:grey;
+}
+
+.series-dividing-line{
+  height:1rpx;
+  background:gainsboro;
+}
+
+.hot-view{
+  width: 100%;
+  height: 20%;
+  background:white;
+}
+
+.popular-item{
+  width: 80px;
+  height: 100%;
+}
+.hot-libstick{
+  height: 80%;
+  display:flex;
+  flex-direction:row;
+  background:goldenrod;
+}
+
+.brands-name-view{
+  width: 100%;
+  height: 40rpx;
+  background:white;
+}
+
+.libsticks{
+  display:flex;
+  flex-direction:row;
+}
+
+.libsticks-item{
+  width: 15%;
+  height: 110rpx;
+}
+
+.brands-name-text-view{
+  font-size: 31rpx;
+  color: gray;
+  font-weight:bold;
+  display:flex;
+  flex-direction: row
+}
+.brands-imge{
+  height: 45rpx;
+  width: 200rpx;
+}
+
+.series-text-view{
+  font-size: 28rpx;
+  color:grey;
+}

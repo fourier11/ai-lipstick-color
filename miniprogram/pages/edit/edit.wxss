@@ -1,0 +1,205 @@
+/**
+ * Copyright 2020 fourier11
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* pages/edit/edit.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 32rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  padding-bottom: 25px;
+}
+
+.image {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.edit-bar {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items:center;
+  margin-bottom:13rpx;
+}
+
+.lipstick-list {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.plus-view{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.plus-image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.share-view{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.share-image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.share_button{
+  display: flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+button::after {
+  border: none
+}
+
+.share_label{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+text {
+  padding-top:2rpx;
+  padding-bottom:2rpx;
+  padding-right: 20px;
+}
+
+.lipstick_scroll_view{
+  width: 100%;  
+  height: 100%; 
+  white-space: nowrap; 
+  display: flex
+}
+.scroll-view_H{
+  width: 140rpx;  
+  height: 100%; 
+  display: inline-block;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.scroll-view-item{
+  width: 100%; 
+  height: 100%; 
+  display:flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+  background: whitesmoke;
+}
+
+.scroll-view-child-item{
+  width: 100%; 
+  height: 100%; 
+  display:flex;
+  align-items: center;    /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+  border-color: whitesmoke;
+  border-style: solid;
+  border-radius: 60%;
+  /* border-width: 30rpx,30rpx,30rpx,30rpx; */
+}
+
+.item-text{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center; /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.lipstick-info{
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  align-items: center; /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+  background:ghostwhite;
+  font-size: 30rpx;
+}
+
+.select-veiw{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /**子view垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align:center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+}
+
+.mini-btn{
+    margin: 0 20px;
+}
+
+.select-imge{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.button-spacing {
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hint-spacing {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-hint {
+  padding-top: 10rpx;
+  padding-bottom: 2rpx;
+  color: #bebebe;
+  font-size: 24rpx;
+}

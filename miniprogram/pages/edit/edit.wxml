@@ -1,0 +1,67 @@
+<!-- 
+  ~ Copyright 2020 fourier11
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ 
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~ 
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License. 
+  -->
+
+<!--pages/edit/edit.wxml-->
+<view class="container">
+  <image src="{{filePath}}" class="image" mode="aspectFit" bindtap="previewImage"></image>
+  <view class="lipstick-info" style="color: {{lipstick_cur.color}};  margin-bottom:13rpx;">
+    <text>{{lipstick_cur.brand}}-{{lipstick_cur.series}}-{{lipstick_cur.name}}</text>
+  </view>
+  <view class="edit-bar">
+    <view class="plus-view">
+      <image src="/images/plus.png" class="plus-image" mode="aspectFit" bindtap="addLipStick"></image>
+    </view>
+    <view class="lipstick-list">
+      <scroll-view class="lipstick_scroll_view" scroll-x="true">
+        <block wx:for="{{lipstick_list}}" wx:key="unique" wx:for-item="redirectItem">
+            <view class="scroll-view_H" id="{{redirectItem.id}}" bindtap="clickLipstick">
+              <view class="scroll-view-item">
+                <view class="scroll-view-child-item" style="background: {{redirectItem.color}};">
+                  <block wx:if="{{selected == redirectItem.id}}">
+                    <image class="select-imge" src="/images/selected.png"></image>
+                  </block>
+                  <block wx:else>
+                      <image class="select-imge" src=""></image>
+                  </block>
+                </view>
+              </view>
+            </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="share-view" open-type="share" id="share-button">
+      <!-- <image src="/images/share.png" class="share-image" mode="aspectFit" /> -->
+      <button class="share_button" open-type="share" id="share-button">
+        <!-- <label class="share_label" for="share-button"> -->
+          <image src="/images/share.png" class="share-image" mode="aspectFit" />
+        <!-- </label> -->
+      </button>
+      <!-- <label for="share-button">
+        <image src="/images/share.png" class="share-image" mode="aspectFit" />
+      </label> -->
+    </view>
+  </view>
+  <view class="button-spacing">
+    <view class="hint-spacing">
+      <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="clickCartoonButton">卡通化</button>
+      <button class="weui-btn mini-btn" type="default" size="mini" open-type="feedback"> 反馈与建议</button>
+    </view>
+    <view class="hint-spacing">
+      <button class="weui-btn mini-btn" type="primary" size="mini" disabled="true">购买</button>
+      <view class="text-hint">敬请期待</view>
+    </view>
+  </view>
+</view>

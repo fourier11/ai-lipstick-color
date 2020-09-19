@@ -1,0 +1,70 @@
+<!--
+  ~ Copyright 2020 fourier11
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ 
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~ 
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!--pages/lipstick/lipstick.wxml-->
+<view class="container-lip">
+<scroll-view class="lipstick-brand-scroll" scroll-y="true">
+  <view class="popular-view">
+    <view class="brands-name-text-view">
+      <text class="brands-name-text">热门色号</text>
+    </view>
+    <view class="brand-dividing-line"></view>
+    <view>
+      <scroll-view class="popular-scroll-view" scroll-x="true">
+        <block wx:for="{{popularList}}" wx:key="unique" wx:for-item="item">
+            <view class="scroll-view_H" bindtap="chooseLipStick" id="{{item.id}}">
+              <view class="scroll-view-item">
+                <view class="item-view" style="background: {{item.color}};">
+                  <rich-text class="item-text">{{item.name}}</rich-text>
+                </view>
+              </view>
+            </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="brands-view">
+    <block wx:for="{{lipsticksData}}" wx:key="unique" wx:for-item="brandItem">
+        <view class="brands-name-view" style="height: {{brandItem.seriesnum*110 + 40}}px;">
+          <view class="brands-name-text-view">
+            <text class="brands-name-text">{{brandItem.name}}</text>
+            <image class="brands-imge" src="/images/{{brandItem.imge}}"></image>
+          </view>
+          <view class="brand-dividing-line"></view>
+          <block wx:for="{{brandItem.series}}" wx:key="unique" wx:for-item="seriesItem">
+            <view class="series-view" style="height: 110px;">
+              <view class="series-text-view">
+                <text class="series-text">{{seriesItem.name}}</text>
+              </view>
+              <view class="series-dividing-line"></view>
+              <scroll-view scroll-x="true" style="white-space: nowrap; display: flex" >
+                <block wx:for="{{seriesItem.lipsticks}}" wx:key="unique" wx:for-item="lipstickItem">
+                  <view class="scroll-view_H" bindtap="chooseLipStick" id="{{lipstickItem.id}}">
+                    <view class="scroll-view-item">
+                      <view class="item-view" style="background: {{lipstickItem.color}};">
+                        <rich-text class="item-text">{{lipstickItem.name}}</rich-text>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+          </block>
+        </view>
+    </block>
+  </view>
+</scroll-view>
+</view>

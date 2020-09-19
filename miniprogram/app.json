@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/edit/edit",
+    "pages/lipstick/lipstick",
+    "pages/shop/shop"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "恋爱助手-AI口红试色",
+    "navigationBarTextStyle": "black"
+  },
+  "cloud": true,
+  "sitemapLocation": "sitemap.json"
+}
